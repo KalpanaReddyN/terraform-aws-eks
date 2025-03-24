@@ -4,13 +4,13 @@ terraform {
       source = "hashicorp/aws"
       version = "5.66.0"
     }
-  }
+  } 
 
   backend "s3" {
-    bucket = "81s-remote-state"
+    bucket = "81s-remote-state-k8"
     key    = "expense-vpc"
     region = "us-east-1"
-    dynamodb_table = "81s-locking"
+    dynamodb_table = "81s-locking-k8"
   }
 }
 
